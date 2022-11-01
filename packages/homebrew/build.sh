@@ -6,7 +6,7 @@ set -eo pipefail
 
 PROJECT_DIR=$(cd "$(dirname $BASH_SOURCE)"; pwd)
 
-HOMEBREW_TARGET=$PROJECT_DIR/homebrew/Homebrew
+HOMEBREW_TARGET=$PROJECT_DIR/homebrew/homebrew/Homebrew
 
 mkdir -p $PROJECT_DIR/homebrew
 
