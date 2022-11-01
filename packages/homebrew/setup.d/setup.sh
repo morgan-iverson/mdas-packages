@@ -3,9 +3,10 @@
 set -x
 set -eo pipefail
 
-PROJECT_DIR=$(cd "$(dirname $BASH_SOURCE)"; pwd)/homebrew
+PROJECT_DIR=$(cd "$(dirname $BASH_SOURCE)"; pwd)
 
-HOMEBREW_TARGET=$PROJECT_DIR/homebrew
+HOMEBREW_TARGET=$PROJECT_DIR/homebrew/Homebrew
+
 
 cd $PROJECT_DIR
 # tar xz --strip 1 HOMEBREW_TARGET.tgz
@@ -13,6 +14,7 @@ cd $PROJECT_DIR
 # brew update --force --quiet
 # chmod -R go-w "$(brew --prefix)/share/zsh"
 
+##  ORIGINAL
 # mkdir homebrew && curl -L https://github.com/Homebrew/brew/tarball/master | tar xz --strip 1 -C homebrew
 # eval "$(homebrew/bin/brew shellenv)"
 # brew update --force --quiet
