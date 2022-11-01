@@ -9,9 +9,9 @@ HOMEBREW_TARGET=$PROJECT_DIR/homebrew/Homebrew
 
 
 cd $PROJECT_DIR/homebrew
-# tar -xvf $HOMEBREW_TARGET.tar.gz --strip 1
+tar -xvf $HOMEBREW_TARGET.tar.gz --strip 1
 eval "$($(pwd)/bin/brew shellenv)" 
-brew update --force --quiet
+brew update --force --quiet # needs git & ruby
 chmod -R go-w "$(brew --prefix)/share/zsh"
 
 rm $HOMEBREW_TARGET.tar.gz
