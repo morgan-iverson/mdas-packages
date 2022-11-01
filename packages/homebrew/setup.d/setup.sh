@@ -3,14 +3,14 @@
 set -x
 set -eo pipefail
 
-PROJECT_DIR=$(cd "$(dirname $BASH_SOURCE)"; pwd) # /opt/packages/gemfire/gemfire
+PROJECT_DIR=$(cd "$(dirname $BASH_SOURCE)/.."; pwd) # /opt/packages/homebrew/
 
 echo $PROJECT_DIR
 HOMEBREW_TARGET=$PROJECT_DIR/homebrew/Homebrew
 
 
-cd $PROJECT_DIR
-tar xz --strip 1 HOMEBREW_TARGET.tgz
+cd $PROJECT_DIR/homebrew
+tar xz --strip 1 $HOMEBREW_TARGET.tar.gz
 # eval "$(homebrew/bin/brew shellenv)" # ??
 # brew update --force --quiet
 # chmod -R go-w "$(brew --prefix)/share/zsh"

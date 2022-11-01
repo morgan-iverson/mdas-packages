@@ -3,7 +3,7 @@
 # set -x
 # set -eo pipefail
 
-# PROJECT_DIR=$(cd "$(dirname $BASH_SOURCE)"; pwd)/homebrew
+# PROJECT_DIR=$(cd "$(dirname $BASH_SOURCE)/.."; pwd)/homebrew
 
 # cd $PROJECT_DIR
 

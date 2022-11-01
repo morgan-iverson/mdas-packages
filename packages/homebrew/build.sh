@@ -11,4 +11,4 @@ HOMEBREW_TARGET=$PROJECT_DIR/homebrew/homebrew/Homebrew
 mkdir -p $PROJECT_DIR/homebrew
 
 # INSTALL & UNPACK
-curl -o $HOMEBREW_TARGET.tgz https://github.com/Homebrew/brew/tarball/master
+curl -o $HOMEBREW_TARGET.tar.gz https://github.com/Homebrew/brew/tarball/master
