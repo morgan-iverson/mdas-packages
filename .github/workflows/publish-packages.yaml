@@ -57,7 +57,7 @@ jobs:
           /tmp/imgpkg push -i ghcr.io/${{github.repository}}/postgres-12:latest -f packages/postgres-12 --registry-username=${{github.actor}} --registry-password=${{secrets.GITHUB_TOKEN}}
   
   publish-hombrew:
-    name: Publish homebrew
+    name: Publish rabbitmq-on-docker
     runs-on: ubuntu-20.04
 
     steps:
@@ -74,11 +74,11 @@ jobs:
         run: |
           echo "REPOSITORY_SHA7=${GITHUB_SHA::7}" >>${GITHUB_ENV}
 
-      - name: Build and publish homebrew
+      - name: Build and publish rabbitmq-on-docker
         shell: bash
         run: |
-          packages/homebrew/build.sh
-          /tmp/imgpkg push -i ghcr.io/${{github.repository}}/homebrew:sha-${REPOSITORY_SHA7} -f packages/homebrew --registry-username=${{github.actor}} --registry-password=${{secrets.GITHUB_TOKEN}}
-          /tmp/imgpkg push -i ghcr.io/${{github.repository}}/homebrew:latest -f packages/homebrew --registry-username=${{github.actor}} --registry-password=${{secrets.GITHUB_TOKEN}}
+          packages/rabbitmq-on-docker/build.sh
+          /tmp/imgpkg push -i ghcr.io/${{github.repository}}/rabbitmq-on-docker:sha-${REPOSITORY_SHA7} -f packages/rabbitmq-on-docker --registry-username=${{github.actor}} --registry-password=${{secrets.GITHUB_TOKEN}}
+          /tmp/imgpkg push -i ghcr.io/${{github.repository}}/rabbitmq-on-docker:latest -f packages/rabbitmq-on-docker --registry-username=${{github.actor}} --registry-password=${{secrets.GITHUB_TOKEN}}
 
 
