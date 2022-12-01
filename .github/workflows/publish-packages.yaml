@@ -81,7 +81,7 @@ jobs:
           /tmp/imgpkg push -i ghcr.io/${{github.repository}}/rabbitmq-in-docker:sha-${REPOSITORY_SHA7} -f packages/rabbitmq-in-docker --registry-username=${{github.actor}} --registry-password=${{secrets.GITHUB_TOKEN}}
           /tmp/imgpkg push -i ghcr.io/${{github.repository}}/rabbitmq-in-docker:latest -f packages/rabbitmq-in-docker --registry-username=${{github.actor}} --registry-password=${{secrets.GITHUB_TOKEN}}
 
-  publish-hombrew:
+  publish-rabbitmq-cluster-operator:
     name: Publish rabbitmq-cluster-operator
     runs-on: ubuntu-20.04
 
