@@ -196,18 +196,11 @@ If your workshop is stuck on 'Waiting for deployment...' you will need to find t
     docker build -t package .
     ```
 
-    **Note:** I am using the images registry running on a local educates cluster (REGISTRY=localhost:5001)
-
-3. Push to registry
-    ```
-    docker push $REGISTRY/gemfire-image:latest
-    ```
-
 ## How to test package image creation 
 Make sure all necessary files have been copied in the correct locations. Files that exist in your image will exist in the `/opt/package/package-name` folder in your workshop.
 1. Run Image as Container 
     ```
-    docker run -it --name gemfire $REGISTRY/gemfire-image:latest 
+    <!-- docker run -it --name gemfire $REGISTRY/gemfire-image:latest  -->
     ```
 
 ## Add environment variables
